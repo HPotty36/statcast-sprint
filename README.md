@@ -1,10 +1,28 @@
-# Statcast 단거리 대회 (statcast-sprint)
+<a href="https://hpotty36.github.io/statcast-sprint/"><img src="docs/readme/banner.svg" width="100%" alt="STATCAST 단거리 대회. 가상 선수 네 명이 100m 결승 60m 지점을 지나는 레인 그림과, 한 선수의 기록을 데이터 값(파랑)과 이번 레이스의 게임 값으로 나눈 표"></a>
+
+<h1 align="center">Statcast 단거리 대회 <sub>statcast-sprint</sub></h1>
+
+<p align="center">
+  <a href="https://hpotty36.github.io/statcast-sprint/"><img src="docs/readme/play.svg" height="68" alt="샘플 데이터로 바로 해 보기"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/HPotty36/statcast-sprint/actions/workflows/pages.yml"><img src="https://img.shields.io/github/actions/workflow/status/HPotty36/statcast-sprint/pages.yml?branch=main&style=flat-square&label=pages&labelColor=121212" alt="GitHub Pages 배포 상태"></a>
+  <img src="https://img.shields.io/badge/times-estimated-d9d6cc?style=flat-square&labelColor=121212" alt="기록: 추정">
+  <img src="https://img.shields.io/badge/data-fictional%20sample-d9d6cc?style=flat-square&labelColor=121212" alt="데이터: 가상 선수 샘플">
+  <img src="https://img.shields.io/badge/MLB-unofficial%20fan%20project-d9d6cc?style=flat-square&labelColor=121212" alt="MLB 비공식 팬 프로젝트">
+  <img src="https://img.shields.io/badge/stack-TypeScript%20%C2%B7%20React%20%C2%B7%20Vite-d9d6cc?style=flat-square&labelColor=121212" alt="TypeScript, React, Vite">
+</p>
 
 MLB 야수들의 Statcast 주루 데이터로 100m 기록을 **추정**하고, 그 선수들로 100m와 4×100m 계주 대회를 여는 브라우저 게임입니다. 팀별 대항(MLB 30개 팀)과 국가별 대항(출생 국가) 두 모드가 있고, 예선부터 결승까지 모든 조를 레이스 재생으로 볼 수 있습니다.
 
 > **비공식 팬 프로젝트입니다.** MLB, MLB Advanced Media, Baseball Savant와 아무 관계가 없습니다. 저장소와 배포 페이지에는 **실제 선수 데이터가 없습니다.** 배포 페이지는 가상 선수 샘플로만 돌아가고, 실제 선수로 해 보려면 각자 아래 파이프라인으로 데이터를 받아 로컬에서 실행합니다.
 
-*English: an unofficial fan project that estimates 100m times for MLB position players from Statcast baserunning data and runs a 100m and 4×100m relay meet in the browser. The repository and the deployed page contain only fictional sample players; to use real players, fetch the data yourself with the local pipeline below.*
+*English: an unofficial fan project that estimates 100m times for MLB position players from Statcast baserunning data and runs a 100m and 4×100m relay meet in the browser. The repository and the [deployed page](https://hpotty36.github.io/statcast-sprint/) contain only fictional sample players; to use real players, fetch the data yourself with the local pipeline below.*
+
+<img src="docs/readme/race-100m.gif" width="100%" alt="100m 결승 레이스 재생. 여덟 레인의 배번 태그가 출발선에서 결승선까지 달리고, 결승선을 지나면 순위 번호가 붙는다">
+
+<p align="center"><sub>100m 결승 재생 (2배속, 시드 2026, 가상 선수). 엔진이 미리 계산한 궤적을 Canvas가 다시 그리기만 합니다.</sub></p>
 
 ## 기록은 어떻게 나오나
 
@@ -14,13 +32,51 @@ MLB 야수들의 Statcast 주루 데이터로 100m 기록을 **추정**하고, �
 | 가속 시간 상수 `τ` (90ft 러닝 스플릿) | 바람, 레이스별 기복 |
 | | 바통 터치 (안전 / 공격), 레인 배정 |
 
-- 운동 모델: `d(t) = vmax·t − (vmax − v0)·τ·(1 − e^(−t/τ))` 를 풀어 100m 도달 시간을 구합니다 (`src/engine/kinematics.ts`, `pipeline/model.py`).
+운동 모델은 아래 식을 풀어 100m 도달 시간을 구합니다 (`src/engine/kinematics.ts`, `pipeline/model.py`). 정지 출발은 `v0 = 0`, 계주의 플라잉 출발은 진입 속도 `v0 > 0` 입니다.
+
+```math
+d(t) = v_{max}\,t - (v_{max} - v_0)\,\tau\,\left(1 - e^{-t/\tau}\right)
+```
+
 - 화면과 CLI의 모든 기록은 **추정 기록**입니다. 실제 100m 기록이 아닙니다.
 - 난수는 전부 시드 RNG에서 나옵니다. **같은 시드 + 같은 입력 = 같은 결과.**
 
+<img src="docs/readme/breakdown.png" width="100%" alt="100m 결승 결과 표. 1위 줄을 열면 왼쪽 '데이터' 열(파란 괘선, 스프린트 스피드·vmax·τ·기복 배수가 파란 숫자)과 오른쪽 '이번 레이스 (게임)' 열(주황 괘선, 출발 반응·레이스 vmax·레이스 τ·풍속이 잉크 숫자)이 나뉜다">
+
+<p align="center"><sub>결과 표의 줄을 열면 그 기록을 만든 값이 둘로 나뉩니다. <b>파란 괘선 아래는 Statcast 데이터</b>, 주황 괘선 아래는 이번 레이스의 게임 값입니다.</sub></p>
+
+## 화면
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/readme/relay-order.png" alt="4×100m 계주 오더 화면. 캐나다 팀을 열어 1~4번 주자 선택, 주자별 스피드와 τ(파랑), 구간마다 안전 / 공격 바통 터치를 고르고 오른쪽에 추정 팀 기록이 보인다"></td>
+    <td width="50%"><img src="docs/readme/podium.png" alt="대회 결과 화면. 100m 시상대와 4×100m 시상대가 2-1-3 순서의 잉크 블록으로 서고, 메달 색은 블록 위 띠에만 쓰인다. 국가별 대항이라 배번 옆에 국기와 IOC 코드가 붙는다"></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>4×100m 계주 오더</b><br><sub>주자 순서와 구간별 바통 터치(안전 / 공격)를 고릅니다. 고친 오더는 공유 링크에 담깁니다.</sub></td>
+    <td valign="top"><b>대회 결과</b><br><sub>국가별 대항(출생 국가). 시상대 블록은 잉크, 금·은·동은 6px 띠에만 씁니다.</sub></td>
+  </tr>
+</table>
+
+<img src="docs/readme/mobile.png" width="100%" alt="휴대폰 세로 화면 세 장: 대회 설정 홈, 100m 결승 레이스 재생, 대회 결과 시상대">
+
+<p align="center"><sub>휴대폰 세로 화면이 먼저입니다. 375px 폭에서도 가로 스크롤이 없습니다.</sub></p>
+
+### 디자인: Race Bib
+
+선수는 모두 **배번표**로 그립니다. 흰 Tyvek 태그에 검은 콘덴스드 성, 위쪽 3px 띠는 팀 코드에서 만든 색(`oklch(0.58 0.16 h)`, 실제 구단 색이 아님)입니다. 나머지는 배번을 찍은 종이: 섬유 결이 있는 바탕, 잉크 괘선, 그리고 뜻이 정해진 두 색.
+
+| | 쓰는 곳 |
+|---|---|
+| **신호 주황** `#e5431b` | 주요 동작 버튼, 진행 중 탭, 상단 바 띠, 결승선, 구역을 여는 굵은 괘선 |
+| **공식 파랑** `#1d3fbf` | 데이터에서 온 값만: 스프린트 스피드, vmax, τ, 30m·60m 통과 눈금 |
+| 잉크 · 종이 | 그 밖의 전부. 진출(Q / q), 실격, 시청한 조 같은 상태는 색이 아니라 선 모양(실선 / 점선, 채움 / 외곽선, 취소선)으로 |
+
+토큰·서체·컴포넌트 규칙은 [DESIGN.md](DESIGN.md) 에 있습니다. 위 그림들도 같은 토큰과 서체로 그렸습니다.
+
 ## 바로 해 보기
 
-- 배포 페이지: GitHub Pages (샘플 데이터)
+- 배포 페이지: [hpotty36.github.io/statcast-sprint](https://hpotty36.github.io/statcast-sprint/) (GitHub Pages, 가상 선수 샘플 데이터)
 - 로컬:
 
 ```bash
@@ -123,6 +179,9 @@ npm run typecheck
 | `pipeline/` | Python 데이터 파이프라인 (로컬 전용) |
 | `scripts/` | CLI (`run-event.ts`, `calibrate.ts`, `check-dist.ts`) |
 | `tests/` | Vitest |
+| `docs/readme/` | 이 README의 그림 (배너·버튼·소셜 미리보기 SVG, 화면 캡처) |
+
+README 그림을 다시 만들려면: 화면 캡처는 샘플 빌드를 띄운 뒤 `docs/readme/capture.mjs` (Playwright, 시드 2026), 배너·버튼 SVG는 글자를 고친 뒤 `docs/readme/embed_fonts.py` 로 그 글자만 담은 서체를 다시 넣습니다. 사용법은 두 파일 머리에 있습니다. 저장소 소셜 미리보기는 `docs/readme/social-preview.png` (1280×640)를 저장소 Settings → General → Social preview 에 올립니다.
 
 전체 명세는 [PLAN.md](PLAN.md), 제품 맥락은 [PRODUCT.md](PRODUCT.md), 화면 디자인 규칙은 [DESIGN.md](DESIGN.md) 에 있습니다.
 
@@ -142,4 +201,5 @@ $env:VITE_DATA = 'sample'; npm run build; npm run check:dist
 
 - 데이터: [Baseball Savant](https://baseballsavant.mlb.com) (Statcast), MLB Stats API. 데이터의 권리는 각 제공자에게 있습니다.
 - 국기 그래픽: [Twemoji](https://github.com/twitter/twemoji) (CC-BY 4.0), `country-flag-emoji-polyfill`
-- 서체: Big Shoulders Display, Archivo, Black Han Sans (SIL OFL), Pretendard (SIL OFL)
+- 서체: Big Shoulders Display, Archivo, Black Han Sans (SIL OFL), Pretendard (SIL OFL). README 그림의 SVG에도 쓰인 글자만 골라 넣었습니다.
+- README 배지: [Shields.io](https://shields.io)
