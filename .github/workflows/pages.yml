@@ -1,0 +1,51 @@
+# 샘플 데이터 전용 빌드 → GitHub Pages 배포 (PLAN.md 8 Phase 7)
+# 실데이터는 저장소에 없고(핵심 규칙 1), 빌드도 VITE_DATA=sample 로 샘플만 읽는다.
+# check:dist 가 결과물에 data/ 경로 파일이나 실선수 JSON 이 있으면 배포 전에 실패시킨다.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - name: Build (sample data only)
+        run: npm run build
+        env:
+          VITE_DATA: sample
+      - name: Check dist has no real data
+        run: npm run check:dist
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

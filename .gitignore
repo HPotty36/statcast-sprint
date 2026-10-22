@@ -1,0 +1,26 @@
+# 핵심 규칙 1: 실제 Statcast / 실제 선수 데이터는 절대 커밋하지 않는다
+data/
+web/public/data/
+
+# Node
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+pipeline/.cache/
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# 디자인 리뷰 캡처: 언제든 다시 만들 수 있는 작업 파일 (화면에 선수 이름이 찍히므로 저장소에 두지 않는다)
+.impeccable/review/

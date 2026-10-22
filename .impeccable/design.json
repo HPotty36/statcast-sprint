@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T12:00:00+00:00",
+  "title": "Design System: Statcast Sprint",
+  "extensions": {
+    "colorMeta": {
+      "tyvek": {
+        "role": "neutral",
+        "displayName": "Tyvek",
+        "canonical": "#f4f3ee",
+        "tonalRamp": [
+          "oklch(0.15 0.007 100)",
+          "oklch(0.26 0.007 100)",
+          "oklch(0.38 0.007 100)",
+          "oklch(0.49 0.007 100)",
+          "oklch(0.61 0.007 100)",
+          "oklch(0.72 0.007 100)",
+          "oklch(0.84 0.007 100)",
+          "oklch(0.95 0.007 100)"
+        ]
+      },
+      "tyvek-lane": {
+        "role": "neutral",
+        "displayName": "Tyvek Lane",
+        "canonical": "#ebe9e1",
+        "tonalRamp": [
+          "oklch(0.15 0.01 95)",
+          "oklch(0.26 0.01 95)",
+          "oklch(0.38 0.01 95)",
+          "oklch(0.49 0.01 95)",
+          "oklch(0.61 0.01 95)",
+          "oklch(0.72 0.01 95)",
+          "oklch(0.84 0.01 95)",
+          "oklch(0.95 0.01 95)"
+        ]
+      },
+      "stock": {
+        "role": "neutral",
+        "displayName": "Stock",
+        "canonical": "#d9d6cc",
+        "tonalRamp": [
+          "oklch(0.15 0.015 95)",
+          "oklch(0.26 0.015 95)",
+          "oklch(0.38 0.015 95)",
+          "oklch(0.49 0.015 95)",
+          "oklch(0.61 0.015 95)",
+          "oklch(0.72 0.015 95)",
+          "oklch(0.84 0.015 95)",
+          "oklch(0.95 0.015 95)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#cfccc2",
+        "tonalRamp": [
+          "oklch(0.15 0.013 95)",
+          "oklch(0.26 0.013 95)",
+          "oklch(0.38 0.013 95)",
+          "oklch(0.49 0.013 95)",
+          "oklch(0.61 0.013 95)",
+          "oklch(0.72 0.013 95)",
+          "oklch(0.84 0.013 95)",
+          "oklch(0.95 0.013 95)"
+        ]
+      },
+      "tag-white": {
+        "role": "neutral",
+        "displayName": "Tag White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.38 0 0)",
+          "oklch(0.49 0 0)",
+          "oklch(0.61 0 0)",
+          "oklch(0.72 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "bib-ink": {
+        "role": "neutral",
+        "displayName": "Bib Ink",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.38 0 0)",
+          "oklch(0.49 0 0)",
+          "oklch(0.61 0 0)",
+          "oklch(0.72 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#3f3d38",
+        "tonalRamp": [
+          "oklch(0.15 0.01 85)",
+          "oklch(0.26 0.01 85)",
+          "oklch(0.38 0.01 85)",
+          "oklch(0.49 0.01 85)",
+          "oklch(0.61 0.01 85)",
+          "oklch(0.72 0.01 85)",
+          "oklch(0.84 0.01 85)",
+          "oklch(0.95 0.01 85)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#5f5b53",
+        "tonalRamp": [
+          "oklch(0.15 0.015 85)",
+          "oklch(0.26 0.015 85)",
+          "oklch(0.38 0.015 85)",
+          "oklch(0.49 0.015 85)",
+          "oklch(0.61 0.015 85)",
+          "oklch(0.72 0.015 85)",
+          "oklch(0.84 0.015 85)",
+          "oklch(0.95 0.015 85)"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#e5431b",
+        "tonalRamp": [
+          "oklch(0.15 0.2 35)",
+          "oklch(0.26 0.2 35)",
+          "oklch(0.38 0.2 35)",
+          "oklch(0.49 0.2 35)",
+          "oklch(0.61 0.2 35)",
+          "oklch(0.72 0.2 35)",
+          "oklch(0.84 0.2 35)",
+          "oklch(0.95 0.2 35)"
+        ]
+      },
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Signal Deep",
+        "canonical": "#d23a14",
+        "tonalRamp": [
+          "oklch(0.15 0.195 35)",
+          "oklch(0.26 0.195 35)",
+          "oklch(0.38 0.195 35)",
+          "oklch(0.49 0.195 35)",
+          "oklch(0.61 0.195 35)",
+          "oklch(0.72 0.195 35)",
+          "oklch(0.84 0.195 35)",
+          "oklch(0.95 0.195 35)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink",
+        "canonical": "#1a0a04",
+        "tonalRamp": [
+          "oklch(0.15 0.03 40)",
+          "oklch(0.26 0.03 40)",
+          "oklch(0.38 0.03 40)",
+          "oklch(0.49 0.03 40)",
+          "oklch(0.61 0.03 40)",
+          "oklch(0.72 0.03 40)",
+          "oklch(0.84 0.03 40)",
+          "oklch(0.95 0.03 40)"
+        ]
+      },
+      "signal-soft": {
+        "role": "primary",
+        "displayName": "Signal Wash",
+        "canonical": "#fbe3da",
+        "tonalRamp": [
+          "oklch(0.15 0.035 40)",
+          "oklch(0.26 0.035 40)",
+          "oklch(0.38 0.035 40)",
+          "oklch(0.49 0.035 40)",
+          "oklch(0.61 0.035 40)",
+          "oklch(0.72 0.035 40)",
+          "oklch(0.84 0.035 40)",
+          "oklch(0.95 0.035 40)"
+        ]
+      },
+      "official": {
+        "role": "secondary",
+        "displayName": "Official Blue",
+        "canonical": "#1d3fbf",
+        "tonalRamp": [
+          "oklch(0.15 0.2 265)",
+          "oklch(0.26 0.2 265)",
+          "oklch(0.38 0.2 265)",
+          "oklch(0.49 0.2 265)",
+          "oklch(0.61 0.2 265)",
+          "oklch(0.72 0.2 265)",
+          "oklch(0.84 0.2 265)",
+          "oklch(0.95 0.2 265)"
+        ]
+      },
+      "infraction": {
+        "role": "tertiary",
+        "displayName": "Infraction Red",
+        "canonical": "#a3220c",
+        "tonalRamp": [
+          "oklch(0.15 0.17 33)",
+          "oklch(0.26 0.17 33)",
+          "oklch(0.38 0.17 33)",
+          "oklch(0.49 0.17 33)",
+          "oklch(0.61 0.17 33)",
+          "oklch(0.72 0.17 33)",
+          "oklch(0.84 0.17 33)",
+          "oklch(0.95 0.17 33)"
+        ]
+      },
+      "medal-gold": {
+        "role": "tertiary",
+        "displayName": "Medal Gold",
+        "canonical": "#c9a227",
+        "tonalRamp": [
+          "oklch(0.15 0.14 90)",
+          "oklch(0.26 0.14 90)",
+          "oklch(0.38 0.14 90)",
+          "oklch(0.49 0.14 90)",
+          "oklch(0.61 0.14 90)",
+          "oklch(0.72 0.14 90)",
+          "oklch(0.84 0.14 90)",
+          "oklch(0.95 0.14 90)"
+        ]
+      },
+      "medal-silver": {
+        "role": "tertiary",
+        "displayName": "Medal Silver",
+        "canonical": "#a9aaad",
+        "tonalRamp": [
+          "oklch(0.15 0.004 270)",
+          "oklch(0.26 0.004 270)",
+          "oklch(0.38 0.004 270)",
+          "oklch(0.49 0.004 270)",
+          "oklch(0.61 0.004 270)",
+          "oklch(0.72 0.004 270)",
+          "oklch(0.84 0.004 270)",
+          "oklch(0.95 0.004 270)"
+        ]
+      },
+      "medal-bronze": {
+        "role": "tertiary",
+        "displayName": "Medal Bronze",
+        "canonical": "#b06a3b",
+        "tonalRamp": [
+          "oklch(0.15 0.11 55)",
+          "oklch(0.26 0.11 55)",
+          "oklch(0.38 0.11 55)",
+          "oklch(0.49 0.11 55)",
+          "oklch(0.61 0.11 55)",
+          "oklch(0.72 0.11 55)",
+          "oklch(0.84 0.11 55)",
+          "oklch(0.95 0.11 55)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home screen title only; uppercase, balanced wrap."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Screen titles, uppercase."
+      },
+      "stage-title": {
+        "displayName": "Stage title",
+        "purpose": "Round and heat heading above the canvas; 40px at 600px+."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section and panel titles; the wordmark uses the same size."
+      },
+      "clock": {
+        "displayName": "Clock",
+        "purpose": "Running race clock; 48px at 600px+."
+      },
+      "time": {
+        "displayName": "Time",
+        "purpose": "Result times; 17px small variant."
+      },
+      "bib-name": {
+        "displayName": "Bib name",
+        "purpose": "Uppercase surname on the bib tag; 14px small, 34px large; the team bib sets its team code at 19px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "UI text, tabular figures on by default."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Intro sentence under a title, max 40ch, ink-soft."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form field labels."
+      },
+      "column-head": {
+        "displayName": "Column head",
+        "purpose": "Table headers over a 1.5px ink rule, ink-muted."
+      },
+      "hint": {
+        "displayName": "Hint",
+        "purpose": "Helper text in ink-muted."
+      },
+      "delegation-code": {
+        "displayName": "Delegation code",
+        "purpose": "Delegation code at the head of entry and relay-order rows; IOC three-letter code in nation mode; 18px in the medal table."
+      },
+      "delegation-name": {
+        "displayName": "Delegation name",
+        "purpose": "Country name beside the code, UI face, ink-muted, one line with ellipsis; only in opened entry rows and the medal table. Never the display face."
+      },
+      "flag": {
+        "displayName": "Flag",
+        "purpose": "Flag-emoji glyph font only, not a text face. Self-hosted Twemoji Country Flags woff2 via country-flag-emoji-polyfill (CC-BY 4.0, credited in the footer), then system emoji fonts. 18px in the delegation label, 16px leading a team bib, 1.15em in an athlete bib's team slot."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 1px 2px rgb(18 18 18 / 0.08), 0 4px 12px rgb(18 18 18 / 0.06)",
+        "purpose": "Primary (signal) buttons only; the system is otherwise flat."
+      },
+      {
+        "name": "drag-lift",
+        "value": "0 6px 18px rgb(18 18 18 / 0.18)",
+        "purpose": "State only: a relay squad slot while it is held and dragged."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All UI transitions (button fill, press, chevron rotate)."
+      },
+      {
+        "name": "duration-ui",
+        "value": "160ms",
+        "purpose": "Button and chevron transitions; removed under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "420px"
+      },
+      {
+        "name": "wide",
+        "value": "600px"
+      },
+      {
+        "name": "squad-wide",
+        "value": "900px"
+      },
+      {
+        "name": "canvas-narrow",
+        "value": "560px (canvas width, below)"
+      }
+    ],
+    "teamBand": {
+      "value": "oklch(0.58 0.16 <hash(team) mod 360>)",
+      "purpose": "Generated team colour; bib top band and speed-strip name rule only."
+    },
+    "focusRing": {
+      "value": "outline: 2px solid #1d3fbf; outline-offset: 2px",
+      "purpose": "Global :focus-visible."
+    },
+    "texture": {
+      "name": "tyvek-fibre",
+      "value": "SVG feTurbulence fractalNoise, baseFrequency 0.012 0.045, 3 octaves, about 9% alpha, 240px tile",
+      "purpose": "Body background fibre over tyvek."
+    },
+    "raceScale": {
+      "value": "100m: 0-100m; 4×100m: 0-400m; fixed across every heat and round of an event",
+      "purpose": "Canvas track scale (src/ui/race/tracks.ts)."
+    },
+    "takeoverZone": {
+      "value": "exchange line at each 100m boundary (1.5px ink-muted); zone from boundary -20m to +10m, stock at 55% alpha",
+      "purpose": "Relay canvas exchange marks; World Athletics 30m zone, numbers from RULES.RELAY_TAKEOVER_ZONE_M in src/engine/config.ts."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Signal-orange action, one per decision point (Start, Play, Next heat).",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6.5 4.5v11l9-5.5z\" fill=\"currentColor\" stroke=\"none\"/></svg> Play</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:0 16px; border:1.5px solid #e5431b; border-radius:2px; background:#e5431b; color:#1a0a04; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-weight:650; font-size:15px; cursor:pointer; box-shadow:0 1px 2px rgb(18 18 18 / 0.08), 0 4px 12px rgb(18 18 18 / 0.06); transition:background-color 160ms cubic-bezier(0.16,1,0.3,1), transform 160ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background:#d23a14; border-color:#d23a14; } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action in a 1.5px ink frame (Back, Replay, Show result).",
+      "html": "<button class=\"ds-btn-ghost\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.5 10a5.5 5.5 0 1 0 1.8-4.1\"/><path d=\"M4 3.5v3.5h3.5\"/></svg> Replay</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:0 16px; border:1.5px solid #121212; border-radius:2px; background:transparent; color:#121212; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-weight:650; font-size:15px; cursor:pointer; transition:background-color 160ms cubic-bezier(0.16,1,0.3,1), transform 160ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { background:#ebe9e1; } .ds-btn-ghost:active { transform:translateY(1px); } .ds-btn-ghost:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Link Button",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Borderless underlined escape (skip remaining heats, reset).",
+      "html": "<button class=\"ds-btn-link\">Skip remaining heats</button>",
+      "css": ".ds-btn-link { min-height:36px; padding:0 4px; border:0; background:transparent; color:#3f3d38; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-weight:600; font-size:15px; text-decoration:underline; text-underline-offset:3px; cursor:pointer; } .ds-btn-link:hover { color:#121212; } .ds-btn-link:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Seed Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field in a 1.5px ink frame; tabular figures for the seed.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Seed</span><input class=\"ds-input\" placeholder=\"Random if empty\"></label>",
+      "css": ".ds-field { display:grid; gap:8px; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; color:#121212; } .ds-field-label { font-size:13px; font-weight:700; letter-spacing:0.02em; } .ds-input { min-height:44px; padding:0 12px; border:1.5px solid #121212; border-radius:2px; background:#fff; font-family:inherit; font-size:15px; font-variant-numeric:tabular-nums; letter-spacing:0.02em; color:#121212; } .ds-input::placeholder { color:#77736a; } .ds-input:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Round Tabs",
+      "kind": "nav",
+      "refersTo": "tab",
+      "description": "Equal-width round tabs; the active tab gets a 4px signal underline over the ink baseline.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab\" role=\"tab\" aria-selected=\"true\">Heats</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Semi-finals</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Final</button></div>",
+      "css": ".ds-tabs { display:flex; border-bottom:1.5px solid #121212; } .ds-tab { flex:1; min-height:44px; background:transparent; border:0; border-bottom:4px solid transparent; margin-bottom:-1.5px; font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; color:#5f5b53; cursor:pointer; } .ds-tab:hover { color:#121212; } .ds-tab[aria-selected='true'] { color:#121212; border-bottom-color:#e5431b; } .ds-tab:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Heat Chips",
+      "kind": "chip",
+      "refersTo": "heat-chip",
+      "description": "Line-form watched state: dashed unwatched, solid watched, ink-filled current.",
+      "html": "<div class=\"ds-heats\"><button class=\"ds-heat ds-heat-on\">Heat 1</button><button class=\"ds-heat ds-heat-done\">Heat 2</button><button class=\"ds-heat\">Heat 3</button></div>",
+      "css": ".ds-heats { display:flex; gap:4px; } .ds-heat { min-height:36px; padding:0 10px; border:1.5px dashed #5f5b53; border-radius:2px; background:transparent; color:#121212; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-size:13px; font-weight:650; cursor:pointer; } .ds-heat:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; } .ds-heat-done { border-style:solid; border-color:#121212; } .ds-heat-on { background:#121212; border:1.5px solid #121212; color:#fff; }"
+    },
+    {
+      "name": "Bib Tag",
+      "kind": "custom",
+      "refersTo": "bib-tag",
+      "description": "The athlete's identity: white tag, generated band, condensed surname, delegation code (in nation mode the flag sits before the code); struck and faded when DQ/DNF. The team bib puts the code in the name slot, led by the flag in nation mode. Inside a delegation's own row the team slot is dropped.",
+      "html": "<span class=\"ds-bib\" style=\"--band: oklch(0.58 0.16 150)\"><span class=\"ds-bib-name\">BELHOLT</span><span class=\"ds-bib-team\">DUF</span></span> <span class=\"ds-bib ds-bib-dq\" style=\"--band: oklch(0.58 0.16 20)\"><span class=\"ds-bib-name\">PELTON</span><span class=\"ds-bib-team\">EDC</span></span> <span class=\"ds-bib ds-bib-teamonly\" style=\"--band: oklch(0.58 0.16 280)\"><span class=\"ds-bib-name\">TBB</span></span> <span class=\"ds-bib ds-bib-teamonly ds-bib-dq\" style=\"--band: oklch(0.58 0.16 200)\"><span class=\"ds-bib-name\">ORS</span></span><span class=\"ds-out\">DNF</span> <span class=\"ds-bib\" style=\"--band: oklch(0.58 0.16 240)\"><span class=\"ds-bib-name\">ALVAREZ</span><span class=\"ds-bib-team\"><span class=\"ds-bib-flag\">🇩🇴</span>DOM</span></span> <span class=\"ds-bib ds-bib-teamonly\" style=\"--band: oklch(0.58 0.16 60)\"><span class=\"ds-bib-flag ds-bib-flag-lead\">🇯🇵</span><span class=\"ds-bib-name\">JPN</span></span>",
+      "css": ".ds-bib { --band:#121212; display:inline-flex; align-items:baseline; gap:6px; padding:5px 7px 3px; background:#fff; border:1px solid #121212; border-top:3px solid var(--band); line-height:1; white-space:nowrap; } .ds-bib-name { font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:17px; letter-spacing:0.01em; color:#121212; } .ds-bib-team { font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-size:10px; font-weight:650; letter-spacing:0.04em; color:#5f5b53; } .ds-bib-dq { opacity:0.55; } .ds-bib-dq .ds-bib-name { text-decoration:line-through; text-decoration-thickness:2px; } .ds-bib-teamonly .ds-bib-name { font-size:19px; min-width:2.2em; } .ds-out { margin-left:6px; font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:16px; color:#a3220c; } .ds-bib-flag { font-family:'Twemoji Country Flags','Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif; font-weight:400; line-height:1; font-size:1.15em; margin-right:3px; vertical-align:-0.1em; } .ds-bib-flag-lead { font-size:16px; margin-right:0; align-self:center; } .ds-bib-flag-lead + .ds-bib-name { min-width:0; }"
+    },
+    {
+      "name": "Qualification Marks",
+      "kind": "chip",
+      "refersTo": "qual-mark-place",
+      "description": "Q is a solid ink tag; q is a dashed outline tag; both in the UI face.",
+      "html": "<span class=\"ds-q ds-q-place\">Q</span> <span class=\"ds-q ds-q-time\">q</span>",
+      "css": ".ds-q { display:inline-grid; place-items:center; width:24px; height:22px; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-weight:800; font-size:14px; line-height:1; border:1.5px solid #121212; border-radius:1px; } .ds-q-place { background:#121212; color:#fff; } .ds-q-time { background:transparent; color:#121212; border-style:dashed; }"
+    },
+    {
+      "name": "Ruled Panel",
+      "kind": "card",
+      "refersTo": "",
+      "description": "A section is Tyvek between a 4px ink top rule and a 1px ink bottom rule, not a card.",
+      "html": "<section class=\"ds-panel\"><h3 class=\"ds-panel-title\">Start list</h3><p class=\"ds-panel-body\">Sprint speed <span class=\"ds-data\">31.0 ft/s</span> · reaction 0.176 s</p></section>",
+      "css": ".ds-panel { display:grid; gap:16px; padding:16px 0; border-top:4px solid #121212; border-bottom:1px solid #121212; background:#f4f3ee; color:#121212; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-size:15px; } .ds-panel-title { margin:0; font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:22px; line-height:1; text-transform:uppercase; } .ds-panel-body { margin:0; font-variant-numeric:tabular-nums; } .ds-data { color:#1d3fbf; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Sticky ink bar with a 4px signal band, wordmark, data chip and KO/EN toggle.",
+      "html": "<header class=\"ds-topbar\"><span class=\"ds-wordmark\">STATCAST<span class=\"ds-wordmark-sprint\">SPRINT</span></span><span class=\"ds-topbar-meta\"><span class=\"ds-chip\">샘플 · 시드 2026</span><button class=\"ds-toggle\">EN</button></span></header>",
+      "css": ".ds-topbar { display:flex; align-items:center; gap:12px; min-height:48px; padding:8px 16px; background:#121212; color:#f4f3ee; border-top:4px solid #e5431b; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; } .ds-wordmark { font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:22px; letter-spacing:0.01em; line-height:1; } .ds-wordmark-sprint { color:#e5431b; margin-left:0.2em; } .ds-topbar-meta { margin-left:auto; display:flex; align-items:center; gap:8px; } .ds-chip { display:inline-flex; align-items:center; height:24px; padding:0 8px; border:1px solid #3a3935; border-radius:2px; font-size:12px; color:#c9c6bc; font-variant-numeric:tabular-nums; } .ds-toggle { min-height:32px; padding:0 12px; border:1.5px solid #55534d; border-radius:2px; background:transparent; color:#f4f3ee; font-family:inherit; font-size:13px; font-weight:650; cursor:pointer; } .ds-toggle:hover { background:#26251f; } .ds-toggle:focus-visible { outline:2px solid #1d3fbf; outline-offset:2px; }"
+    },
+    {
+      "name": "Exchange Choice",
+      "kind": "custom",
+      "refersTo": "exchange-option",
+      "description": "Relay safe / aggressive segmented control with entry and fail odds; the checked cell fills ink, the same grammar as the home mode control.",
+      "html": "<fieldset class=\"ds-handoff\"><legend class=\"ds-handoff-label\">1→2 exchange</legend><div class=\"ds-handoff-seg\"><label class=\"ds-handoff-opt\"><input type=\"radio\" name=\"ds-h\" checked><span class=\"ds-handoff-title\">Safe</span><span class=\"ds-handoff-detail\">entry 80% · fail 1%</span></label><label class=\"ds-handoff-opt\"><input type=\"radio\" name=\"ds-h\"><span class=\"ds-handoff-title\">Aggressive</span><span class=\"ds-handoff-detail\">entry 88% · fail 3%</span></label></div></fieldset>",
+      "css": ".ds-handoff { margin:0; padding:8px 0; border:0; border-top:1px solid #cfccc2; border-bottom:1px solid #cfccc2; font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; color:#121212; } .ds-handoff-label { font-size:12px; font-weight:700; padding:0; margin-bottom:4px; } .ds-handoff-seg { display:grid; grid-template-columns:1fr 1fr; border:1.5px solid #121212; border-radius:2px; } .ds-handoff-opt { position:relative; display:grid; padding:6px 8px; cursor:pointer; } .ds-handoff-opt + .ds-handoff-opt { border-left:1.5px solid #121212; } .ds-handoff-opt input { position:absolute; opacity:0; pointer-events:none; } .ds-handoff-opt:has(input:checked) { background:#121212; color:#fff; } .ds-handoff-opt:has(input:focus-visible) { outline:2px solid #1d3fbf; outline-offset:2px; } .ds-handoff-title { font-weight:700; font-size:13px; } .ds-handoff-detail { font-size:11px; color:#5f5b53; } .ds-handoff-opt:has(input:checked) .ds-handoff-detail { color:#cfcbc1; }"
+    },
+    {
+      "name": "Delegation Label",
+      "kind": "custom",
+      "refersTo": "delegation-code",
+      "description": "Row-head identity: flag, code, and the country name only in opened entry rows and the medal table. The flag accompanies the code and never replaces it.",
+      "html": "<span class=\"ds-dlabel\"><span class=\"ds-dlabel-flag\">🇺🇸</span><span class=\"ds-dlabel-code\">USA</span><span class=\"ds-dlabel-name\">United States</span></span> <span class=\"ds-dlabel\"><span class=\"ds-dlabel-flag\">🇵🇷</span><span class=\"ds-dlabel-code\">PUR</span></span>",
+      "css": ".ds-dlabel { display:inline-flex; align-items:baseline; gap:6px; white-space:nowrap; color:#121212; } .ds-dlabel-flag { font-family:'Twemoji Country Flags','Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif; font-weight:400; line-height:1; font-size:18px; align-self:center; } .ds-dlabel-code { font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:20px; line-height:1; } .ds-dlabel-name { font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-weight:550; font-size:12px; color:#5f5b53; overflow:hidden; text-overflow:ellipsis; }"
+    },
+    {
+      "name": "Qualification Cut",
+      "kind": "custom",
+      "refersTo": "tag-out",
+      "description": "Relay-order row outside the top-16 cut: sorted last, head text in ink-muted, dashed ink-muted 'Not qualified' tag, no colour. The solid ink 'Edited' tag is shown for contrast; the estimated team time stays on every row.",
+      "html": "<div class=\"ds-team\"><span class=\"ds-dlabel-code\">CAN</span><span class=\"ds-legs\">SMITH — LEE — ROY — KIM</span><span class=\"ds-est\">39.12</span></div><div class=\"ds-team ds-team-out\"><span class=\"ds-dlabel-code\">AUS</span><span class=\"ds-legs\">HALL — PARK — WEST — DAY</span><span class=\"ds-tag-edited\">Edited</span><span class=\"ds-tag-out\">Not qualified</span><span class=\"ds-est\">40.48</span></div>",
+      "css": ".ds-team { display:flex; align-items:center; gap:12px; padding:10px 12px; background:#fff; border:1px solid #cfccc2; color:#121212; margin-bottom:8px; } .ds-team-out { color:#5f5b53; } .ds-dlabel-code { font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:20px; line-height:1; } .ds-legs { flex:1; font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:14px; } .ds-est { font-family:'Big Shoulders Display','Black Han Sans','Arial Narrow',sans-serif; font-weight:800; font-size:15px; color:#3f3d38; font-variant-numeric:tabular-nums; } .ds-tag-out, .ds-tag-edited { font-family:'Archivo Variable','Pretendard Variable',system-ui,sans-serif; font-size:11px; font-weight:700; padding:2px 6px; } .ds-tag-out { border:1.5px dashed #5f5b53; color:#5f5b53; } .ds-tag-edited { border:1.5px solid #121212; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Race Bib",
+    "overview": "Every athlete is a race bib. The category default for sports sims, a grey table with a coloured team dot, is refused: the athlete's identity is a white Tyvek tag with a black condensed surname, a thin band of team colour across its top edge and the team code beside it. The same tag runs in the canvas lanes, sits in start lists and results rows, and grows large on the podium. Everything else in the system is the paper the bibs are printed on: an off-white fibre ground, ink rules, and two narrowly assigned colours.\n\nThe world is official-meet print, not a broadcast graphics package. Density is high and tabular: times and splits line up in tabular figures, sections are separated by heavy ink rules, not boxed into cards. State is shown in line form (solid versus dashed, filled versus outlined, struck through), so every distinction survives without colour. Colour carries meaning, not decoration. Signal orange is the meet's live band. Official blue marks a number that came from measured data and not from the game's dice.\n\nMobile portrait comes first (no horizontal scroll at 375px); desktop gets the same composition with wider tables. Korean and English are equal citizens: Hangul has its own self-hosted display and UI faces rather than falling back to a system font.",
+    "keyCharacteristics": [
+      "White bib tags with a 3px team-colour top band are the athlete's only identity mark.",
+      "Tyvek ground (faint fibre noise) between ink rules; panels are ruled sections, not cards.",
+      "Heavy condensed display numerals for names, times, places and headings; a workhorse grotesk for everything else.",
+      "Two meaning-bound colours: signal orange (live/primary band) and official blue (data-derived values).",
+      "Line-form state: solid/dashed, filled/outlined, struck-through.",
+      "Near-square corners (1-2px) everywhere."
+    ],
+    "rules": [
+      {
+        "name": "The Band Rule",
+        "body": "Signal orange marks the live job and section-opening bands: primary action, active tab, top-bar band, finish line, and the heavy rule that opens a section. It never colours a value, a place numeral or a canvas place badge. Places are ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Provenance Rule",
+        "body": "Official blue means \"this number came from data\". Sprint speed, vmax, τ and the split ticks are blue. Game values (reaction time, race vmax/τ, wind, form) are ink, even when they sit beside data values.",
+        "section": "colors"
+      },
+      {
+        "name": "The Generated Band Rule",
+        "body": "Team colour is never a real club colour. It is generated from the team code as `oklch(0.58 0.16 <hue>)`, with lightness and chroma fixed so every band reads on white. In nation mode the hue comes from the IOC code, so a country's band is never its flag or kit colour either. It appears only as the bib's top band (and the speed strip's name rule), never as a fill or text colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Fake Bold Rule",
+        "body": "`font-synthesis: none` is set globally. Black Han Sans has a single weight, so Hangul display text stays at its drawn weight rather than being smeared bolder.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lowercase q Rule",
+        "body": "The Q/q qualification marks are set in the UI face at 800, not the display face. In the condensed face a lowercase q reads as g.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Section Rule",
+        "body": "A panel is a span of Tyvek between a 4px ink top rule and a 1px ink bottom rule, with no background, side borders, radius or shadow. Hierarchy comes from rule weight: 4px opens a section, 1.5px heads a table or control, 1px divides.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Reading Name Rule",
+        "body": "A country name is read, not printed on a bib, so it is set in the UI face (550, 12px), never in the condensed display face. Codes are display; names are UI.",
+        "section": "typography"
+      },
+      {
+        "name": "The Code Is The Identity Rule",
+        "body": "In a band, a bib or a row head, the three-letter code names the delegation. The flag rides beside it and never stands in for it. The one exception is the podium at 420px and below, where athlete bibs keep the flag and drop the code because the medal table carries it.",
+        "section": "components"
+      },
+      {
+        "name": "The Uncoloured Cut Rule",
+        "body": "Missing the cut is a quiet state, so it gets ink-muted and a dashed outline, never a colour. Orange stays for primary actions and in-progress state, blue for data values, and red for infractions; missing the cut is not one.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** render every athlete as a bib tag (white face, 1px ink border, 3px generated team band, uppercase display surname, team code) in lanes, rows, strips and podium alike.",
+      "**Do** keep signal orange (#e5431b) for primary buttons, the active tab underline, the top-bar band, the finish line and section-opening rules; put signal-ink (#1a0a04) text on it.",
+      "**Do** colour only data-derived values official blue (#1d3fbf): sprint speed, vmax, τ, split ticks. Game values stay ink.",
+      "**Do** carry state in line form: solid Q tag versus dashed q tag, solid watched heat chip versus dashed unwatched, struck-through and faded DQ/DNF bib, single versus double handoff glyph.",
+      "**Do** build sections as ruled Tyvek: 4px ink top rule, 1px ink bottom rule, no fill.",
+      "**Do** set numerals in Big Shoulders Display with tabular figures, and Hangul through the self-hosted Black Han Sans and Pretendard Variable; keep `font-synthesis: none`.",
+      "**Do** fix the canvas scale per event across all its heats and rounds: 0-100m for the 100m and 0-400m for the 4×100m. Mark each 100m exchange with a solid ink-muted line, and shade a stock takeover zone from 20m before it to 10m after (World Athletics' 30m zone; the numbers live in `RULES.RELAY_TAKEOVER_ZONE_M`).",
+      "**Do** label every relay time as estimated.",
+      "**Do** name a delegation by its code, with the flag beside it in nation mode; show the country name only in opened entry rows and the medal table, in the UI face (550, 12px).",
+      "**Do** mark a team outside the relay cut with ink-muted text and the dashed \"Not qualified\" tag, sorted last."
+    ],
+    "donts": [
+      "**Don't** use real MLB team colours or logos; team colour is generated (`oklch(0.58 0.16 h)`) and lives only in the band.",
+      "**Don't** colour place numerals, canvas place badges or game values with signal orange or official blue.",
+      "**Don't** wrap sections in rounded, shadowed cards. At rest, the only shadow is the primary button's lift; the drag lift exists only while a slot is held.",
+      "**Don't** round corners beyond 2px.",
+      "**Don't** use colour as the only signal for qualification, DQ, DNF, handoff or watched state.",
+      "**Don't** put DQ or DNF in a filled badge; they are infraction-red text in the display face beside a struck, faded tag.",
+      "**Don't** set the lowercase q mark in the condensed display face.",
+      "**Don't** use icon fonts or text glyphs as icons; use the authored 20px stroke set. Flag emoji are identity marks set in the flag font beside a delegation code, not icons.",
+      "**Don't** let a flag replace the code (except podium athlete bibs at 420px and below), set a country name in the display face, or repeat the flag and code on bibs inside their own delegation's row.",
+      "**Don't** colour an out-of-cut row or its tag; orange, blue and red keep their meanings."
+    ]
+  }
+}
